@@ -1,0 +1,161 @@
+#navBar{
+    border:1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#navBar a {
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: blue;
+    color: white;
+}
+
+#mainContainer {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#left {
+    border: 1px solid red;
+    width: 25%;
+    height: 100vh;
+}
+
+
+
+#filter,#sort,#search{
+    text-align: center;
+    border: 1px solid green;
+    padding-bottom: 10px;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#filter select {
+    width: 80%;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: blue;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ButtonsAscDesc {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+}
+
+.ButtonsAscDesc button {
+    width: 80%;
+    margin: auto;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(116, 116, 239);
+    color: white;
+    font-size: 16px;
+}
+
+input {
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 60%;
+}
+
+input[type="submit"]{
+    width: 30%;
+    background: rgb(116, 116, 239);
+    color: white;
+    border: none;
+} 
+
+button , input[type="submit"] , select {
+    cursor: pointer;
+}
+
+
+#right {
+    border: 1px solid red;
+    width: 74%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin: auto;
+}
+
+.smallContainer {
+    border: 1px solid green;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+.smallContainer img {
+    width: 100%;
+    height: 40%;
+}
+
+.categ{
+    margin-top: -18px;
+}
+
+.descrip,
+.locate,
+.postedAtDate,
+.price{
+    margin-top: -10px;
+}
+
+/* categ
+descrip
+locate
+postedAtDate
+price
+divButtons
+editBtn
+deleteBtn */
+
+.divButtons{
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.divButtons button {
+    padding: 8px;
+    width: 40%;
+}
+
+.editBtn , .deleteBtn{
+    border: none;
+    border-radius: 10px;
+}
+
+.editBtn {
+    background: blue;
+}
+
+.deleteBtn{
+    background: rgb(231, 53, 53);
+}

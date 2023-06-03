@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/product.css">
+    <title>Browse Classifieds</title>
+</head>
+<body>
+
+    <nav>
+        <div id="navBar">
+            <a href="/index.html">Login Page</a>
+            <a href="/html/productForm.html">Post Classifieds</a>
+            <a href="#">Browse Classifieds</a>
+        </div>
+    </nav>
+
+    <div id="mainContainer">
+        <div id="left">
+            <!-- Filter By Category -->
+            <div id="filter">
+                <h2>Filter By Category</h2>
+                <select id="category">
+                    <option value="">Select Category</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Sort By Date -->
+            <div id="sort">
+                <h2>Sort By Date</h2>
+                <div class="ButtonsAscDesc">
+                    <button class="ascButton">Sort By Asc</button>
+                    <button class="descButton">Sort By Desc</button>
+                </div>
+            </div>
+
+            <!-- Search By Product Name -->
+            <div id="search">
+                <h2>Search By Product Name</h2>
+                <form>
+                    <input type="text" class="searchByName" required>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+
+        </div>
+        
+        <!--  -->
+        <div id="right">
+            <!-- Append Data Here -->
+        </div>
+    </div>
+</body>
+</html>
+<script src="../scripts/product.js"></script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/productForm.css">
+    <title>Post Classifieds</title>
+</head>
+<body onload="Checking()">
+    
+    <nav>
+        <div id="navBar">
+            <a href="/index.html">Login Page</a>
+            <a href="#">Post Classifieds</a>
+            <a href="/html/product.html">Browse Classifieds</a>
+        </div>
+    </nav>
+
+     <div id="mainFormContainer">
+        <h1>Add Product</h1>
+        <form>
+            <input type="text" id="name" placeholder="Enter name of the Product" required>
+            <input type="text" id="description" placeholder="Enter Description" required>
+
+            <select id="category">
+                <option value="">Select Category</option>
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
+                <option value="furniture">Furniture</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="url" id="image" placeholder="Enter image Url" required>
+            <input type="text" id="location" placeholder="Enter Location" required>
+            <input type="date" id="postedAt" placeholder="Name of the Product" required>
+            <input type="text" id="price" placeholder="Enter Price">
+
+            <input type="Submit">
+        </form>
+     </div>
+</body>
+</html>
+<script src="../scripts/productForm.js"></script>

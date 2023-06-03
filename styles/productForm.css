@@ -1,0 +1,67 @@
+#navBar{
+    border:1px solid grey;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#navBar a {
+    text-decoration: none;
+    width: 30%;
+    text-align: center;
+    font-size: 22px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: blue;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#mainFormContainer {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 35%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+input , select{
+    padding: 5px;
+    border: 1px solid grey;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+select , input[type="date"]{
+    cursor: pointer;
+}
+
+input[type="url"] {
+    color: blue;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
