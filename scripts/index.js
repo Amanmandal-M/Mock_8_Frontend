@@ -20,6 +20,7 @@ const loginButton = document.querySelector('.loginButton');
 const loginEmail = document.querySelector('.loginEmail')
 const loginPassword = document.querySelector('.loginPassword');
 
+const signupText = document.querySelector('.SignupText')
 
 // Toggle when you click login or signup buttons
 signUpToggleButton.addEventListener('click',(e)=>{
@@ -37,6 +38,14 @@ loginToggleButton.addEventListener('click',(e)=>{
     loginToggleButton.style.background = "blue";
     nameHeader.textContent = "Login Form"
 });
+
+signupText.addEventListener("click", (e)=>{
+    mainContainerSignup.style.display = "block";
+    mainContainerLogin.style.display = 'none';
+    signUpToggleButton.style.background = "blue";
+    loginToggleButton.style.background = "white";
+    nameHeader.textContent = "Signup Form"
+})
 
 
 // Signup
