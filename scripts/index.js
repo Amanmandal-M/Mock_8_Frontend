@@ -54,13 +54,15 @@ signupButton.addEventListener("click", (e)=>{
     let data = {
         "email":SignupEmail.value,
         "password":SignupPassword.value
-    }
+    };
+    
+    if(SignupEmail.value=="" || SignupPassword.value=="") return alert('Invalid Credentials')
+
+    mainContainerSignup.innerHTML = ""
+    mainContainerSignup.innerHTML = "<h2 style='text-align:center'>Please wait it takes time....</h2>"
     registerData(data);
 });
 const registerData = async (data) => {
-
-    if(data.email.value=="" || data.password.value=="") return alert('Invalid Credentials')
-
     try {
         const apiResponse = await fetch(SignupUrl,{
             method: 'POST',
@@ -70,14 +72,24 @@ const registerData = async (data) => {
             body : JSON.stringify(data)
         });
 
-        (SignupEmail.value="" , SignupPassword.value="");
-
+        handleSignUpFunctionalities();
         if(apiResponse.status==201) return alert('Signup Successful');
         else if(apiResponse.status==401) return alert(`User already registered`)
     } catch (error) {
         alert("Contact to administrator")
     }
 };
+
+function handleSignUpFunctionalities(){
+       (SignupEmail.value="" , SignupPassword.value="");
+        mainContainerSignup.innerHTML = ""
+
+        mainContainerLogin.style.display = "block";
+        mainContainerSignup.style.display = "none";
+        signUpToggleButton.style.background = "white";
+        loginToggleButton.style.background = "blue";
+        nameHeader.textContent = "Login Form"
+}
 
 
 // Login
@@ -89,11 +101,15 @@ loginButton.addEventListener("click", (e)=>{
         "email":loginEmail.value,
         "password":loginPassword.value
     }
+
+    if(loginEmail.value=="" || loginPassword.value=="") return alert('Invalid Credentials');
+
+    mainContainerLogin.innerHTML = ""
+    mainContainerLogin.innerHTML = "<h2 style='text-align:center'>Please wait it takes time....</h2>"
     loginData(data);
 });
 const loginData = async (data) => {
 
-    if(data.email.value=="" || data.password.value=="") return alert('Invalid Credentials');
 
     try {
         const apiResponse = await fetch(loginUrl,{
@@ -109,6 +125,8 @@ const loginData = async (data) => {
         (loginEmail.value="", loginPassword.value="");
         
         localStorage.setItem('token', dataOfResponse.Token)
+        
+        mainContainerLogin.innerHTML = ""
 
         if(apiResponse.status==201)      return alert('Login Successful', window.location.href="../html/productForm.html");
         else if(apiResponse.status==401) return alert(`User Not Found`)
